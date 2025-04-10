@@ -1,85 +1,74 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <title>Registration Form</title>
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/register.css" />
+    href="${pageContext.request.contextPath}/css/register.css" />
 </head>
 <body>
-	<div class="register-form">
-		<h2>Registration Form</h2>
-		<form action="#">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<label for="firstName">First Name:</label> <input type="text"
-							id="firstName" name="firstName" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label for="LastName">Last Name:</label> <input type="text"
-							id="lastName" name="lastName" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label for="username">Username:</label> <input type="text"
-							id="username" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label for="birthday">Birthday:</label> <input type="date"
-							id="birthday" name="birthday" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label for="gender">Gender:</label> <input type="text" id="gender"
-							name="gender" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label for="Email">Email:</label> <input type="email" id="Email"
-							name="Email" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label for="phoneNumber">Phone Number:</label> <input
-							type="number" id="phoneNumber" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label for="subject">Subject:</label> <input type="text"
-							id="subject" name="subject" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label for="password">Password:</label> <input type="password"
-							id="password" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<label for="retypePassword">Retype Password:</label> <input
-							type="password" id="retypePassword" name="retypePassword"
-							required>
-					</div>
-				</div>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="${pageContext.request.contextPath}/register"
+            method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="col">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="col">
+                    <label for="birthday">Date of Birth:</label>
+                    <input type="date" id="birthday" name="dob" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="col">
+                    <label for="retypePassword">Retype Password:</label>
+                    <input type="password" id="retypePassword" name="retypePassword" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="image">Profile Picture</label>
+                    <input type="file" id="image" name="image">
+                </div>
+            </div>
 
-			</div>
-			<button type="submit" class="register-button">Submit</button>
-		</form>
-	</div>
-
-
+            <!-- Buttons Row -->
+            <div class="row buttons-row">
+                <button type="submit" class="submit-button">Submit</button>
+                <a href="${pageContext.request.contextPath}/login" class="login-button">Login</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
