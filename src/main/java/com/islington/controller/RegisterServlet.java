@@ -40,11 +40,9 @@ public class RegisterServlet extends HttpServlet {
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String userName = request.getParameter("userName");
-		LocalDate birthday = LocalDate.parse(request.getParameter("birthday")) ;
+		LocalDate birthday = LocalDate.parse(request.getParameter("dob")) ;
 		String gender = request.getParameter("gender");
-		String email = request.getParameter("Email");
-		String number = request.getParameter("phonenumber");
-		String subject = request.getParameter("subject");
+		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String retypePassword = request.getParameter("retypePassword");
 		String error =null;
@@ -70,12 +68,7 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
-        // 4. Phone Number Format Requirement
-        if (!isValidPhoneNumber(number)) {
-            // Redirect to the registration page with an error message
-            response.sendRedirect(request.getContextPath() + "WEB-INF/pages/register.html?error=phone number");
-            return;
-        }
+   
 
         // 5. Password Complexity Requirement and Matching Passwords
         if (!isValidPassword(password, retypePassword)) {
@@ -104,10 +97,6 @@ public class RegisterServlet extends HttpServlet {
         return username.length() > 6 && !username.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?].*");
     }
 
-    private boolean isValidPhoneNumber(String phoneNumber) {
-        // Implement phone number validation logic
-        return phoneNumber.startsWith("+") && phoneNumber.length() == 14;
-    }
 
     private boolean isValidPassword(String password, String retypePassword) {
         // Implement password validation logic
