@@ -14,18 +14,7 @@
   <servlet-mapping>
   <servlet-name>default</servlet-name>
   <url-pattern>/css/*</url-pattern>
+  <url-pattern>/resources/*</url-pattern>
   </servlet-mapping>
   
-  <servlet>
-  <servlet-name>Register</servlet-name>
-  <servlet-class>RegisterServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>Register</servlet-name>
-  <url-pattern>/pages/register.jsp</url-pattern>
-  </servlet-mapping>
-  
-
-
-
 </web-app>

@@ -13,18 +13,17 @@ body {
 	justify-content: center;
 }
 
-.register-form {
+.container {
 	background-color: rgba(0,0,0,0.3);
 	backdrop-filter:blur(10px);
 	width: 880px;
+	height:1000px;
 	border-radius: 30px;
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 	margin: 50px auto;
 	padding: 20px;
-}
-
-.container {
 	display: flex;
+	flex-direction:column;
 	flex-wrap: wrap;
 	align-items: centers;
 	justify-content: center;

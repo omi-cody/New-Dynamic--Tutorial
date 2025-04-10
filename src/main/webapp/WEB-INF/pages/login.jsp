@@ -27,8 +27,15 @@
 				</div>
 			</div>
 			<button type="submit" class="login-button">Login</button>
-			<a href="${pageContext.request.contextPath}/pages/register.jsp">register</a>
 		</form>
+		<!-- Forgot Password and Register Button in Separate Rows -->
+        <div class="row">
+            <a href="${pageContext.request.contextPath}/forgotpassword" class="forgot-button">Forgot Password</a>
+        </div>
+        
+        <div class="row">
+            <a href="${pageContext.request.contextPath}/register" class="register-button">Create new account</a>
+        </div>
 
 
 	</div>
